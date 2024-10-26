@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rule Engine with AST</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rule Engine with AST</h1>
+        <form id="rule-form">
+            <label for="rule-input">Enter Rule:</label>
+            <input type="text" id="rule-input" placeholder="e.g., (age > 30 && department == 'Sales') || experience > 5">
+            <button type="button" onclick="addRule()">Add Rule</button>
+        </form>
+
+        <h2>Current Rules</h2>
+        <div id="rules-list"></div>
+
+        <h2>Evaluate Rule</h2>
+        <form id="data-form">
+            <label>Age: <input type="number" id="age" value="30"></label>
+            <label>Department: <input type="text" id="department" value="Sales"></label>
+            <label>Experience: <input type="number" id="experience" value="3"></label>
+            <button type="button" onclick="evaluateRules()">Evaluate</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
